@@ -76,7 +76,12 @@ class App extends Component {
                   <small className="pl-2 pt-2 text-center">{data.data[0].date_created} - {data.data[0].nasa_id}</small>
                   <div className="card-body">
                     <h5 className="card-title">{data.data[0].title}</h5>
-                    <p className="card-text">{data.data[0].description}</p>
+                    <p 
+                      className="card-text"
+                      dangerouslySetInnerHTML={{
+                        __html: data.data[0].description
+                      }}
+                    />
                   </div>
                 </div>
               </div>
